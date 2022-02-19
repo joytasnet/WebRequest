@@ -19,9 +19,11 @@ public class ImageController : MonoBehaviour
         } else {
             Texture texture = DownloadHandlerTexture.GetContent(uwr);
 
-            Sprite sp = Sprite.Create((Texture2D)texture,
+            Sprite sp = Sprite.Create(
+                (Texture2D)texture,
                 new Rect(0, 0, texture.width, texture.height),
                 new Vector2(0.5f, 0.5f));
+            sp.name = "man";
 
             Image image = GetComponent<Image>();
 
